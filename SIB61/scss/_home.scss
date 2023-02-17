@@ -1,0 +1,44 @@
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .profile{
+        height: 400px;
+        width: 400px;
+        background: url(./d.webp) no-repeat;
+        background-size: cover;
+        border-radius: 39% 61% 26% 74% / 56% 65% 35% 44%;
+        box-shadow:16px 4px 8px rgba($color: #000000, $alpha: 0.5);
+    }
+    .profile:hover{
+        animation: profile-animation 10s infinite linear;
+    }
+    
+    @keyframes profile-animation {
+       0%{
+        border-radius: 39% 61% 26% 74% / 56% 65% 35% 44%;
+        transform: scale(1.0);
+       }
+       25%{
+border-radius: 30% 70% 47% 53% / 30% 62% 38% 70% ;
+        transform: scale(1.2);
+       }
+       50%{
+        border-radius: 67% 33% 47% 53% / 59% 33% 67% 41% ;
+        transform: scale(0.98);
+       }
+       75%{
+        border-radius: 73% 27% 68% 32% / 59% 63% 37% 41% ;
+        transform: scale(1.2);
+       }
+       100%{
+        border-radius: 39% 61% 26% 74% / 56% 65% 35% 44%;
+        transform: scale(1.0);
+       }
+    }
+
+}

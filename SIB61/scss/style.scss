@@ -1,0 +1,24 @@
+@import './utility';
+@import './header';
+@import './home';
+@import './scrollbar';
+@import './footer';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Ubuntu:wght@300;400;500&display=swap');
+@import './bubble';
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: wheat;
+    font-family: 'Ubuntu';
+    overflow-x: hidden;
+
+
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
