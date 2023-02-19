@@ -1,7 +1,9 @@
-
 footer{
+  position: fixed;
+  bottom: -10px;
+  left:0;
 
-    svg{
-
-    }
+  height: min-content;
+  width: 100vw;
+  z-index: 2;
 }
