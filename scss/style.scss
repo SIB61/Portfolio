@@ -5,6 +5,7 @@
 *{
     margin: 0;
     padding: 0;
+    // z-index: 0;
 }
 body {
   width: 100vw;
@@ -34,3 +35,4 @@ li{
 @import "./scrollbar";
 @import "./bubble";
 @import "./pointer";
+@import "./skills"

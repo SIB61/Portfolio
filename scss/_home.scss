@@ -1,95 +1,142 @@
 #home {
-  // background-color:$oceanBlue;
   background-size: cover;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(to right, black, black, transparent), linear-gradient(to bottom, black , white);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M238.97222883604564 252.3593321867538L300.0045957593647 320.14264270143923 367.7879062740501 259.1102757781202 306.75553935073106 191.32696526343474z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M471.70987405995345 41.1509027748754L531.8795994597962 89.87538568539614 574.881461125656-24.741443869628355z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M726.626%2c302.417C741.991%2c302.894%2c759.393%2c301.223%2c767.148%2c287.951C774.946%2c274.605%2c768.248%2c258.361%2c760.013%2c245.28C752.434%2c233.241%2c740.849%2c223.852%2c726.626%2c223.581C711.953%2c223.302%2c698.393%2c231.31%2c690.963%2c243.966C683.438%2c256.784%2c682.496%2c272.876%2c690.238%2c285.565C697.7%2c297.795%2c712.306%2c301.973%2c726.626%2c302.417' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1094.217509489714 452.1092020927645L969.0937716850278 347.11791984932955 864.1024894415928 472.24165765401585 989.2262272462791 577.2329398974508z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1476.1949817175646 466.5349559529876L1410.520825756907 311.4054580037375 1319.859011458231 427.44728857477077z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M337.09159744733574 357.9643095245799L187.97415013297655 433.76452401409733 309.2015322348357 515.5334257163125z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 0;
 
-  .container{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  }
-
-  h1{
-    font-size: 4.1rem;
-    span{
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
-  h3{
-    font-size: 1.6rem;
+  h1 {
+    font-size: 3rem;
+    span {
+      color: blanchedalmond;
+      text-shadow: 1px 1px 4px currentColor;
+    }
   }
 
-  i{
+  h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.3rem solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15rem; /* Adjust as needed */
+    animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 16rem;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  i {
     margin: 0.5rem;
     cursor: pointer;
     z-index: $button-z;
     position: relative;
+    transition: all 0.4s ease-in-out;
+    font-size: 1.6rem;
 
-    &:nth-child(1){
-      margin-left: 0px;
+    &:nth-child(1):hover {
+      scale: 0.9;
+    }
+    &:nth-child(2):hover {
+      scale: 0.9;
+    }
+    &:nth-child(3):hover {
+      scale: 0.9;
     }
   }
 
-
-
-
-  a{
+  a {
     position: absolute;
-    text-decoration:  none;
+    text-decoration: none;
     z-index: $button-z;
     padding: 0.5rem 0;
     cursor: pointer;
     color: $fontColor;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     bottom: 2rem;
     transition: all 0.5s ease-in-out;
-    margin-left: 3rem;
 
-    &::after{
+    &::after {
       position: absolute;
       right: -3.5rem;
       top: 50%;
       content: "";
-      width: 0rem;
-      height: 4px;
+      width: 3rem;
+      height: 2px;
       background-color: $fontColor;
       transition: all 0.5s ease-in-out;
     }
-    &::before{
+    &::before {
       position: absolute;
       left: -3.5rem;
       top: 50%;
       content: "";
       width: 3rem;
-      height: 4px;
+      height: 2px;
       background-color: $fontColor;
       transition: all 0.5s ease-in-out;
     }
 
-    &:hover::after{
-      width: 3rem;
+    &:hover::after {
+      // width: 0rem;
+      top: 100%;
+      right: 0;
+      width: 50%;
     }
-    &:hover::before{
-      width: 0rem;
+    &:hover::before {
+      top: 100%;
+      left: 0;
+      width: 50%;
     }
-    &:hover{
-      margin-left: 0rem;
+    &:hover {
+      font-size: 1.2rem;
+      // text-shadow: 0.5px 0.5px 1px currentColor;
     }
   }
 
-
   #profile {
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
     height: 400px;
     width: 400px;
     background-size: contain;
     border-radius: 39% 61% 26% 74% / 56% 65% 35% 44%;
     border: 2px solid rgba($color: #000000, $alpha: 0.4);
     animation: profile-animation 10s linear infinite;
-    box-shadow: 50px 50px 48px rgba($color: #000000, $alpha: 0.4) inset,-50px -50px 48px rgba($color: #000000, $alpha: 0.4) inset;
+    box-shadow: 50px 50px 48px rgba($color: #000000, $alpha: 0.4) inset,
+      -50px -50px 48px rgba($color: #000000, $alpha: 0.4) inset;
   }
 
   @keyframes profile-animation {
@@ -114,30 +161,29 @@
     0% {
       margin-top: -100%;
     }
-    70%{
+    70% {
       margin-top: 0%;
     }
     75% {
       margin-top: -15%;
     }
-    80%{
+    80% {
       margin-top: 0%;
     }
-    85%{
+    85% {
       margin-top: -10%;
     }
-    90%{
-     margin-top: -5%;
+    90% {
+      margin-top: -5%;
     }
-    95%{
-      margin-top: 0%; 
+    95% {
+      margin-top: 0%;
     }
-    97%{
-      margin-top: -3%; 
+    97% {
+      margin-top: -3%;
     }
     100% {
       margin-top: 0%;
     }
   }
-
 }
